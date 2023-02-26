@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Lemon </title>
+  <!-- Include your CSS files here -->
+  <link
+  rel="preload"
+  as="style"
+  href="{% static 'myapp/style.css' %}"
+  onload="this.rel = 'stylesheet'"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+</head>
+<body >
+        <!--Header content-->
+
+    {% include 'partials/_header.html' %}
+    <main>
+        {% block content %}
+        <!--this is changable u write these 2 tags and define the web page content-->
+        {% endblock %}
+    </main>
+
+    <!--Footer content-->
+    <footer>
+        <article>
+            <img src="{% static 'myapp/logo_footer.png' %}" />
+        </article>
+        <article>
+          <p>Copyright Little Lemon</p>
+        </article>
+      </footer> 
+    <footer>
+</body>
+</html>

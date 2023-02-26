@@ -1,0 +1,15 @@
+{% load static %}
+
+<header>
+  <header>
+    <img src="{% static 'myapp/logo.png' %}" />
+  </header>
+<nav style="border-radius: 10px;">
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'menu' %}">Menu</a></li>
+      <li><a href="{% url 'booking' %}">Reservation</a></li>
+
+    </ul>
+  </nav> 
